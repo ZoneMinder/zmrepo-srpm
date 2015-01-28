@@ -10,7 +10,7 @@ URL:            http://www.zoneminder.com/
 Source0:        RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
 Source1:        RPM-GPG-KEY-zmrepo	
 Source2:        GPL
-Source3:	zmrepo.repo	
+Source3:	zmrepo-fedora.repo	
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 

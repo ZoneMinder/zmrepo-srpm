@@ -1,0 +1,12 @@
+[zmrepo]
+name=Zoneminder and its dependencies for Fedora 20 - $basearch
+baseurl=http://zmrepo.mehvc.com/f/20/$basearch
+	http://zmrepo.connortechnology.com/f/20/$basearch
+#mirrorlist=http://zmrepo.mehvc.com/f/20/$basearch
+enabled=1
+gpgcheck=1
+# zmrepo uses packages from other repos
+# Import all required gpg keys
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
+

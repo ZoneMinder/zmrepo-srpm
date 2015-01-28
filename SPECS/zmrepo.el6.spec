@@ -11,7 +11,7 @@ Source0:        RPM-GPG-KEY-EPEL-6-zmrepo
 Source1:        RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
 Source2:        RPM-GPG-KEY-zmrepo	
 Source3:        GPL
-Source4:	zmrepo.repo	
+Source4:	zmrepo-centos.repo	
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
