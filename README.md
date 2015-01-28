@@ -1,5 +1,6 @@
 # zmrepo
-This repo contains the source files necessary for building the zmrepo rpms.
+Zmrepo is an RPM repository for ZoneMinder rpm's and its dependencies.
+The zmrepo github repository contains the source files necessary for building the zmrepo rpms.
 
 Currently supported Linux distributions:
 - el6 (CentOS, RedHat, SL)
