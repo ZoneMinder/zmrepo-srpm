@@ -8,7 +8,7 @@ Group:          System Environment/Daemons
 License:        GPLv2+ and LGPLv2+ and MIT
 
 URL:            http://www.zoneminder.com/
-Source0:        RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+Source0:        RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
 Source1:        RPM-GPG-KEY-zmrepo	
 Source2:        GPL
 Source3:	zmrepo-fedora.repo	
@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 
 #GPG Key
 install -Dpm 644 %{SOURCE0} \
-    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
 install -Dpm 644 %{SOURCE1} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
@@ -67,6 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Mon Feb 9 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 21-1
+- Initial Package
+
 * Fri Sep 5 2014 Andrew Bauer <knnniggett@users.sourceforge.net> - 20-3
 - Rename third party gpgkey filenames to prevent rpm conflicts
 
