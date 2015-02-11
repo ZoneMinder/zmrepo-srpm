@@ -1,3 +1,4 @@
+%define upstream_rel 7.0
 
 Name:           zmrepo       
 Version:        7
@@ -17,7 +18,7 @@ Source3:	zmrepo-centos.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:	noarch
-Requires:	redhat-release = %{version} 
+Requires:	redhat-release = %{upstream_rel}
 Conflicts:	fedora-release
 
 %description
