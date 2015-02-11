@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 
@@ -70,7 +70,10 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
-* Mon Feb 9 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 21-1
+* Wed Feb 11 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 7-2
+- Upstream added upstream_rel varaiable.  Modify accordingly.
+
+* Mon Feb 9 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 7-1
 - Initial Package
 
 * Fri Sep 5 2014 Andrew Bauer <knnniggett@users.sourceforge.net> - 20-3
