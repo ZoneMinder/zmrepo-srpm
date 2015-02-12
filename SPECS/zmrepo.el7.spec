@@ -30,8 +30,8 @@ GPG keys as well as configuration for yum and up2date.
 %setup -q  -c -T
 #install -pm 644 %{SOURCE0} .
 install -pm 644 %{SOURCE1} .
-install -pm 644 %{Source2} .
-install -pm 644 %{Source3} .
+install -pm 644 %{SOURCE2} .
+install -pm 644 %{SOURCE3} .
 
 %build
 
@@ -44,12 +44,12 @@ rm -rf $RPM_BUILD_ROOT
 #    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
 install -Dpm 644 %{SOURCE1} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7-zmrepo
-install -Dpm 644 %{Source2} \
+install -Dpm 644 %{SOURCE2} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 # yum
 install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
-install -pm 644 %{Source4}  \
+install -pm 644 %{SOURCE4}  \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 %clean
