@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 
@@ -19,7 +19,7 @@ Source4:	zmrepo-centos.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:	noarch
-Requires:	redhat-release = %{upstream_rel}
+Requires:	redhat-release >= %{upstream_rel}
 Conflicts:	fedora-release
 
 %description
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Thu Apr 2 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 7-4
+- Fixed an issue checking the redhat-release version
+
 * Thu Feb 12 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 7-3
 - Add EPEL 7 key and rename it.
 
