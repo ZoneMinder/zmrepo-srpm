@@ -26,20 +26,21 @@ MOCK="/usr/bin/mock"
 # Begin Sanity Checks
 #
 
-if [ "$#" -ne 2 ]; then 
-    echo
-    echo "ERROR: This script requires two commandline arguments."
-    echo
-    usage
-    exit 0
-fi
-
 # We don't want to run as root
 if [ "$($ID -u)" -eq 0 ]; then
     echo
     echo "ERROR: This script must NOT be run as root. Aborting..."
     echo
     exit 1
+fi
+
+# Verify the user passed two arguments to the script
+if [ "$#" -ne 2 ]; then 
+    echo
+    echo "ERROR: This script requires two commandline arguments."
+    echo
+    usage
+    exit 0
 fi
 
 # Verify the first argument points to an existing mock configuration file
@@ -53,7 +54,7 @@ if [ ! -f "$1.cfg" ]; then
 fi
 
 # Verify the second argument points to an existing source rpm.
-if [ ! -f "$2" ] && [[ $2 != *".src.rpm" ]]; then
+if [ ! -f "$2" ] && [[ "$2" != *".src.rpm" ]]; then
     echo
     echo "ERROR: This script requires the full path to a zoneminder RPM source file."
     echo "A valid RPM source file was not detected from the given command line argument."
