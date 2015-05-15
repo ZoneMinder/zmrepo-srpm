@@ -17,6 +17,12 @@ Source6:	zmrepo-f21-i386.cfg
 Source7:	zmrepo-f21-x86_64.cfg
 Source8:	zmrepo-f21-armhfp.cfg
 Source9:	buildzm.sh
+Source10:	RPM-GPG-KEY-EPEL-6-zmrepo
+Source11:	RPM-GPG-KEY-EPEL-7-zmrepo
+Source12:	RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
+Source13:	RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+Source14:	RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
+Source15:	RPM-GPG-KEY-zmrepo
 
 BuildArch:     noarch
 Requires:      mock 
@@ -36,12 +42,22 @@ install -pm 644 %{SOURCE6} .
 install -pm 644 %{SOURCE7} .
 install -pm 644 %{SOURCE8} .
 install -pm 644 %{SOURCE9} .
+install -pm 644 %{SOURCE10} .
+install -pm 644 %{SOURCE11} .
+install -pm 644 %{SOURCE12} .
+install -pm 644 %{SOURCE13} .
+install -pm 644 %{SOURCE14} .
+install -pm 644 %{SOURCE15} .
 
 %build
 
 %install
-install -dpm 755 %{buildroot}%{_sysconfdir}/mock
-install -dpm 755 %{buildroot}%{_bindir}
+# Create folders in the buildroot
+mkdir -p %{buildroot}%{_sysconfdir}/mock
+mkdir -p %{buildroot}%{_sysconfdir}/pki/mock
+mkdir -p %{buildroot}%{_bindir}
+
+# Install mock config files into mock config folder
 install -pm 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/
@@ -50,6 +66,16 @@ install -pm 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE6} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE7} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE8} %{buildroot}%{_sysconfdir}/mock/
+
+# Install GPG keys into mock keys folder
+install -pm 644 %{SOURCE10} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE11} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE12} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE13} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE14} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE15} %{buildroot}%{_sysconfdir}/pki/mock/
+
+# Install build script into bin
 install -pm 755 %{SOURCE9} %{buildroot}%{_bindir}/
 
 %post
@@ -60,8 +86,9 @@ install -pm 755 %{SOURCE9} %{buildroot}%{_bindir}/
 %defattr(-,root,root,-)
 %doc GPL
 
+%config(noreplace) %{_sysconfdir}/mock/*.cfg
+%config(noreplace) %{_sysconfdir}/pki/mock/*
 %{_bindir}/buildzm.sh
-%{_sysconfdir}/mock/*.cfg
 
 %changelog
 * Thu May 14 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-1
