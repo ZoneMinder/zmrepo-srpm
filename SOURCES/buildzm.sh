@@ -70,7 +70,7 @@ fi
 
 $MOCK -r $1 --clean
 $MOCK -r $1 --init
-$MOCK -r $1 --shell "sh -c 'for FOLDER in libavcodec libavdevice libavfilter libavformat libavresample libavutil libpostproc libswresample libswscale; do ln -sf /usr/include/ffmpeg/$FOLDER/ /usr/include/$FOLDER; done'"
+$MOCK -r $1 --shell "ln -sft /usr/include /usr/include/ffmpeg/{libavcodec,libavdevice,libavfilter,libavformat,libavresample,libavutil,libpostproc,libswresample,libswscale}/"
 $MOCK -r $1 --no-clean $2
 
 if [ "$?" -eq 0  ]; then
