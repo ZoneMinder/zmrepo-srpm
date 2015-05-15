@@ -44,7 +44,7 @@ if [ "$#" -ne 2 ]; then
 fi
 
 # Verify the first argument points to an existing mock configuration file
-if [ ! -f "$1.cfg" ]; then
+if [ ! -f "/etc/mock/$1.cfg" ]; then
     echo
     echo "ERROR: This script requires the user to specify a valid mock configuration file."
     echo "A valid mock configuration file was not detected from the given command line argument."
