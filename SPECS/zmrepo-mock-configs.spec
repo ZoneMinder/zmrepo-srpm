@@ -50,7 +50,7 @@ install -pm 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE6} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE7} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE8} %{buildroot}%{_sysconfdir}/mock/
-install -pm 644 %{SOURCE9} %{buildroot}%{_bindir}/
+install -pm 755 %{SOURCE9} %{buildroot}%{_bindir}/
 
 %post
 
