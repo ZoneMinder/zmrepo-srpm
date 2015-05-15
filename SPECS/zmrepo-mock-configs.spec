@@ -16,6 +16,7 @@ Source5:	zmrepo-f20-x86_64.cfg
 Source6:	zmrepo-f21-i386.cfg
 Source7:	zmrepo-f21-x86_64.cfg
 Source8:	zmrepo-f21-armhfp.cfg
+Source9:	buildzm.sh
 
 BuildArch:     noarch
 Requires:      mock 
@@ -34,11 +35,13 @@ install -pm 644 %{SOURCE5} .
 install -pm 644 %{SOURCE6} .
 install -pm 644 %{SOURCE7} .
 install -pm 644 %{SOURCE8} .
+install -pm 644 %{SOURCE9} .
 
 %build
 
 %install
 install -dpm 755 %{buildroot}%{_sysconfdir}/mock
+install -dpm 755 %{buildroot}%{_bindir}
 install -pm 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/
@@ -47,6 +50,7 @@ install -pm 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE6} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE7} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE8} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE9} %{buildroot}%{_bindir}/
 
 %post
 
@@ -56,6 +60,7 @@ install -pm 644 %{SOURCE8} %{buildroot}%{_sysconfdir}/mock/
 %defattr(-,root,root,-)
 %doc GPL
 
+%{_bindir}/buildzm.sh
 %{_sysconfdir}/mock/*.cfg
 
 %changelog
