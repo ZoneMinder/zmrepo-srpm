@@ -29,6 +29,7 @@ install -pm 644 %{SOURCE0} .
 install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
+install -pm 644 %{SOURCE4} .
 
 %build
 

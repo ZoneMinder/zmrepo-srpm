@@ -32,9 +32,12 @@ GPG keys as well as configuration for yum and up2date.
 install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
+install -pm 644 %{SOURCE4} .
+
+# Comment out reference to rpmfusion gpg key for el7
+/usr/bin/sed -i 's/.*RPM-GPG-KEY-rpmfusion-free.*/#&/' %{SOURCE4}
 
 %build
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
