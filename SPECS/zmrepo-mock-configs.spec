@@ -8,7 +8,7 @@ License:        GPLv2
 
 URL:            https://github.com/knnniggett/zmrepo
 Source0:        GPL
-SOURCE1:        zmrepo-el6-i386.cfg
+Source1:        zmrepo-el6-i386.cfg
 Source2:        zmrepo-el6-x86_64.cfg
 Source3:	zmrepo-el7-x86_64.cfg
 Source4:	zmrepo-f20-i386.cfg
@@ -17,16 +17,16 @@ Source6:	zmrepo-f21-i386.cfg
 Source7:	zmrepo-f21-x86_64.cfg
 Source8:	zmrepo-f21-armhfp.cfg
 Source9:	zmrepo-f22-i386.cfg
-SOURCE10:	zmrepo-f22-x86_64.cfg
-SOURCE11:	zmrepo-f22-armhfp.cfg
-SOURCE12:	buildzm.sh
-SOURCE13:	RPM-GPG-KEY-EPEL-6-zmrepo
-SOURCE14:	RPM-GPG-KEY-EPEL-7-zmrepo
-SOURCE15:	RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
-SOURCE16:	RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
-SOURCE17:	RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
-SOURCE18:	RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
-SOURCE19:	RPM-GPG-KEY-zmrepo
+Source10:	zmrepo-f22-x86_64.cfg
+Source11:	zmrepo-f22-armhfp.cfg
+Source12:	buildzm.sh
+Source13:	RPM-GPG-KEY-EPEL-6-zmrepo
+Source14:	RPM-GPG-KEY-EPEL-7-zmrepo
+Source15:	RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
+Source16:	RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+Source17:	RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
+Source18:	RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
+Source19:	RPM-GPG-KEY-zmrepo
 
 BuildArch:     noarch
 Requires:      mock 
