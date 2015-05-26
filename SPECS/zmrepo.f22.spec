@@ -68,6 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
-* Tue May 26 2014 Andrew Bauer <knnniggett@users.sourceforge.net> - 22-1
+* Tue May 26 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 22-1
 - Initial Package
 

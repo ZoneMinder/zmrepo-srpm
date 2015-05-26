@@ -1,6 +1,6 @@
 Name:           zmrepo-mock-configs      
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
@@ -16,13 +16,17 @@ Source5:	zmrepo-f20-x86_64.cfg
 Source6:	zmrepo-f21-i386.cfg
 Source7:	zmrepo-f21-x86_64.cfg
 Source8:	zmrepo-f21-armhfp.cfg
-Source9:	buildzm.sh
-Source10:	RPM-GPG-KEY-EPEL-6-zmrepo
-Source11:	RPM-GPG-KEY-EPEL-7-zmrepo
-Source12:	RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
-Source13:	RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
-Source14:	RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
-Source15:	RPM-GPG-KEY-zmrepo
+Source9:	zmrepo-f22-i386.cfg
+Source10:	zmrepo-f22-x86_64.cfg
+Source11:	zmrepo-f22-armhfp.cfg
+Source12:	buildzm.sh
+Source13:	RPM-GPG-KEY-EPEL-6-zmrepo
+Source14:	RPM-GPG-KEY-EPEL-7-zmrepo
+Source15:	RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
+Source16:	RPM-GPG-KEY-rpmfusion-free-fedora-20-zmrepo
+Source17:	RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
+Source18:	RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
+Source19:	RPM-GPG-KEY-zmrepo
 
 BuildArch:     noarch
 Requires:      mock 
@@ -44,10 +48,14 @@ install -pm 644 %{SOURCE8} .
 install -pm 644 %{SOURCE9} .
 install -pm 644 %{SOURCE10} .
 install -pm 644 %{SOURCE11} .
-install -pm 644 %{SOURCE12} .
-install -pm 644 %{SOURCE13} .
-install -pm 644 %{SOURCE14} .
-install -pm 644 %{SOURCE15} .
+install -pm 644 %{Source12} .
+install -pm 644 %{Source13} .
+install -pm 644 %{Source14} .
+install -pm 644 %{Source15} .
+install -pm 644 %{Source16} .
+install -pm 644 %{Source17} .
+install -pm 644 %{Source18} .
+install -pm 644 %{Source19} .
 
 %build
 
@@ -66,17 +74,21 @@ install -pm 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE6} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE7} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE8} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE9} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE10} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE11} %{buildroot}%{_sysconfdir}/mock/
 
 # Install GPG keys into mock keys folder
-install -pm 644 %{SOURCE10} %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 644 %{SOURCE11} %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 644 %{SOURCE12} %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 644 %{SOURCE13} %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 644 %{SOURCE14} %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 644 %{SOURCE15} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source13} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source14} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source15} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source16} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source17} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source18} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{Source19} %{buildroot}%{_sysconfdir}/pki/mock/
 
 # Install build script into bin
-install -pm 755 %{SOURCE9} %{buildroot}%{_bindir}/
+install -pm 755 %{Source12} %{buildroot}%{_bindir}/
 
 %post
 
@@ -91,5 +103,8 @@ install -pm 755 %{SOURCE9} %{buildroot}%{_bindir}/
 %{_bindir}/buildzm.sh
 
 %changelog
+* Tue May 26 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-2
+- Add support for Fedora 22
+
 * Thu May 14 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-1
 - Initial Package
