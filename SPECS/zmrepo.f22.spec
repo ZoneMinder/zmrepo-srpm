@@ -1,7 +1,7 @@
 
 Name:           zmrepo       
 Version:        22
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zoneminder and its dependencies for Fedora 22
 
 Group:          System Environment/Daemons 
@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 #GPG Key
 install -Dpm 644 %{SOURCE0} \
-    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-21-zmrepo
+    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
 install -Dpm 644 %{SOURCE1} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
@@ -68,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Mon Jul 6 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 22-2
+- Update gpg key to Fedora 22
+
 * Tue May 26 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 22-1
 - Initial Package
 
