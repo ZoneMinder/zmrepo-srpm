@@ -10,3 +10,12 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-zmrepo
        file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
+[zmrepo-source]
+name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Source
+baseurl=http://zmrepo.mehvc.com/f/$releasever/SRPMS
+        http://zmrepo.connortechnology.com/f/$releasever/SRPMS
+#mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
+

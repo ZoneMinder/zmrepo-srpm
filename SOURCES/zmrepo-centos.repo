@@ -11,3 +11,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever-zmrepo
        file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-el-$releasever-zmrepo
        file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
+[zmrepo-source]
+name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Source
+baseurl=http://zmrepo.mehvc.com/el/$releasever/SRPMS
+        http://zmrepo.connortechnology.com/el/$releasever/SRPMS
+#mirrorlist=http://zmrepo.mehvc.com/el/$releasever/$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
+
