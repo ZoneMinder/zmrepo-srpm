@@ -1,6 +1,6 @@
 Name:           zmrepo       
 Version:        6
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Zoneminder and its dependencies for Enterprise Linux 6
 
 Group:          System Environment/Daemons 
@@ -11,7 +11,8 @@ Source0:        RPM-GPG-KEY-EPEL-6-zmrepo
 Source1:        RPM-GPG-KEY-rpmfusion-free-el-6-zmrepo
 Source2:        RPM-GPG-KEY-zmrepo	
 Source3:        GPL
-Source4:	zmrepo-centos.repo	
+Source4:	zmrepo-centos.repo
+Source5:	zmrepo-centos-testing.repo
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -30,6 +31,7 @@ install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
 install -pm 644 %{SOURCE4} .
+install -pm 644 %{SOURCE5} .
 
 %build
 
@@ -48,6 +50,8 @@ install -Dpm 644 %{SOURCE2} \
 # yum
 install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 install -pm 644 %{SOURCE4}  \
+    $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
+install -pm 644 %{SOURCE5}  \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 %clean
@@ -72,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Sat Aug 29 2015  Andrew Bauer <knnniggett@users.sourceforge.net> - 6-5
+- Added testing and SRPM repos
+
 * Fri Sep 5 2014 Andrew Bauer <knnniggett@users.sourceforge.net> - 6-4
 - Fix typo
 

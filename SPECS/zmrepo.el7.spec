@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 
@@ -14,7 +14,8 @@ URL:            http://www.zoneminder.com/
 Source1:	RPM-GPG-KEY-EPEL-7-zmrepo
 Source2:        RPM-GPG-KEY-zmrepo	
 Source3:        GPL
-Source4:	zmrepo-centos.repo	
+Source4:	zmrepo-centos.repo
+Source5:	zmrepo-centos-testing.repo
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -33,6 +34,7 @@ install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
 install -pm 644 %{SOURCE4} .
+install -pm 644 %{SOURCE5} .
 
 # Comment out reference to rpmfusion gpg key for el7
 /usr/bin/sed -i 's/.*RPM-GPG-KEY-rpmfusion-free.*/#&/' %{SOURCE4}
@@ -53,6 +55,8 @@ install -Dpm 644 %{SOURCE2} \
 # yum
 install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 install -pm 644 %{SOURCE4}  \
+    $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
+install -pm 644 %{SOURCE5}  \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 %clean
@@ -77,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Sat Aug 29 2015  Andrew Bauer <knnniggett@users.sourceforge.net> - 7-5
+- Added testing and SRPM repos
+
 * Thu Apr 2 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 7-4
 - Fixed an issue checking the redhat-release version
 
