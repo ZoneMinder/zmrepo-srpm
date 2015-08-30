@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 

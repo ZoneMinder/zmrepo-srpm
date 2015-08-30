@@ -1,6 +1,6 @@
 Name:           zmrepo       
 Version:        6
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Zoneminder and its dependencies for Enterprise Linux 6
 
 Group:          System Environment/Daemons 
