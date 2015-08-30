@@ -7,7 +7,7 @@ name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearc
 baseurl=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
 	http://zmrepo.connortechnology.com/el/testing/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
-enabled=1
+enabled=0
 gpgcheck=1
 # zmrepo uses packages from other repos
 # Import all required gpg keys
