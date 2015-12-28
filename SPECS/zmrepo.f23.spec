@@ -1,7 +1,7 @@
 
 Name:           zmrepo       
 Version:        23
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zoneminder and its dependencies for Fedora 23
 
 Group:          System Environment/Daemons 
@@ -11,7 +11,8 @@ URL:            http://www.zoneminder.com/
 Source0:        RPM-GPG-KEY-rpmfusion-free-fedora-23-zmrepo
 Source1:        RPM-GPG-KEY-zmrepo	
 Source2:        GPL
-Source3:	zmrepo-fedora.repo	
+Source3:	zmrepo-fedora.repo
+Source4:	zmrepo-fedora-testing.repo	
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -28,6 +29,7 @@ install -pm 644 %{SOURCE0} .
 install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
+install -pm 644 %{SOURCE4} .
 
 %build
 
@@ -44,6 +46,8 @@ install -Dpm 644 %{SOURCE1} \
 # yum
 install -dm 755 $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 install -pm 644 %{SOURCE3}  \
+    $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
+install -pm 644 %{SOURCE4}  \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 %clean
@@ -68,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Mon Dec 28 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 23-2
+- Add testing repo
+
 * Mon Nov 16 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 23-1
 - Initial Package
 
