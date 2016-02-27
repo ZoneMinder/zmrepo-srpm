@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Sat Feb 27 2016  Andrew Bauer <knnniggett@users.sourceforge.net> - 7-7
+- Added added new mirror
+
 * Sat Aug 29 2015  Andrew Bauer <knnniggett@users.sourceforge.net> - 7-5
 - Added testing and SRPM repos
 

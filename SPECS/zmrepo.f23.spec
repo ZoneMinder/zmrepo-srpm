@@ -1,7 +1,7 @@
 
 Name:           zmrepo       
 Version:        23
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Zoneminder and its dependencies for Fedora 23
 
 Group:          System Environment/Daemons 
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Sat Feb 27 2016  Andrew Bauer <knnniggett@users.sourceforge.net> - 23-3
+- Added added new mirror
+
 * Mon Dec 28 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 23-2
 - Add testing repo
 

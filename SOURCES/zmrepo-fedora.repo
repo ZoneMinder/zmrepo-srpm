@@ -1,7 +1,8 @@
 [zmrepo]
 name=Zoneminder and its dependencies for Fedora $releasever - $basearch
-baseurl=http://zmrepo.mehvc.com/f/$releasever/$basearch
-	http://zmrepo.connortechnology.com/f/$releasever/$basearch
+baseurl=http://zmrepo.connortechnology.com/f/$releasever/$basearch
+        http://67.53.78.182/f/$releasever/$basearch
+        http://zmrepo.mehvc.com/f/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
 enabled=1
 gpgcheck=1

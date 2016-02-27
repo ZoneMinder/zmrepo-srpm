@@ -1,6 +1,6 @@
 Name:           zmrepo       
 Version:        6
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Zoneminder and its dependencies for Enterprise Linux 6
 
 Group:          System Environment/Daemons 
@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Sat Feb 27 2016  Andrew Bauer <knnniggett@users.sourceforge.net> - 6-7
+- Added new mirror
+
 * Sat Aug 29 2015  Andrew Bauer <knnniggett@users.sourceforge.net> - 6-5
 - Added testing and SRPM repos
 

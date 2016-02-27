@@ -1,7 +1,8 @@
 [zmrepo]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch
-baseurl=http://zmrepo.mehvc.com/el/$releasever/$basearch
-	http://zmrepo.connortechnology.com/el/$releasever/$basearch
+baseurl=http://zmrepo.connortechnology.com/el/$releasever/$basearch
+        http://67.53.78.182/el/$releasever/$basearch
+        http://zmrepo.mehvc.com/el/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/el/$releasever/$basearch
 enabled=1
 gpgcheck=1

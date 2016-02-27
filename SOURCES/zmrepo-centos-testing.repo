@@ -4,8 +4,9 @@
 
 [zmrepo-testing]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test
-baseurl=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
-	http://zmrepo.connortechnology.com/el/testing/$releasever/$basearch
+baseurl=http://zmrepo.connortechnology.com/el/testing/$releasever/$basearch
+        http://67.53.78.182/el/testing/$releasever/$basearch
+        http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
 enabled=0
 gpgcheck=1
