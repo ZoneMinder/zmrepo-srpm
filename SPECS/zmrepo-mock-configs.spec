@@ -35,6 +35,11 @@ Source21:	RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
 Source22:	RPM-GPG-KEY-rpmfusion-free-fedora-23-zmrepo
 Source23:	RPM-GPG-KEY-zmrepo
 
+Source24:	zmrepo-f24-i386.cfg
+Source25:	zmrepo-f24-x86_64.cfg
+Source26:	zmrepo-f24-armhfp.cfg
+Source27:	RPM-GPG-KEY-rpmfusion-free-fedora-24-zmrepo
+
 BuildArch:     noarch
 Requires:      mock 
 
@@ -67,6 +72,10 @@ install -pm 644 %{SOURCE20} .
 install -pm 644 %{SOURCE21} .
 install -pm 644 %{SOURCE22} .
 install -pm 644 %{SOURCE23} .
+install -pm 644 %{SOURCE24} .
+install -pm 644 %{SOURCE25} .
+install -pm 644 %{SOURCE26} .
+install -pm 644 %{SOURCE27} .
 
 %build
 
@@ -91,6 +100,9 @@ install -pm 644 %{SOURCE11} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE12} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE13} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE14} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE24} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE25} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE26} %{buildroot}%{_sysconfdir}/mock/
 
 # Install build script into bin
 install -pm 755 %{SOURCE15} %{buildroot}%{_bindir}/
@@ -104,6 +116,7 @@ install -pm 644 %{SOURCE20} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE21} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE22} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE23} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE27} %{buildroot}%{_sysconfdir}/pki/mock/
 
 %post
 
@@ -118,6 +131,9 @@ install -pm 644 %{SOURCE23} %{buildroot}%{_sysconfdir}/pki/mock/
 %{_bindir}/buildzm.sh
 
 %changelog
+* Wed Jun 22 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-4
+- Add support for Fedora 24
+
 * Mon Nov 16 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-3
 - Add support for Fedora 23
 
