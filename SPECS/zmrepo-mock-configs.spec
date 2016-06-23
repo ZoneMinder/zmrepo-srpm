@@ -131,7 +131,7 @@ install -pm 644 %{SOURCE27} %{buildroot}%{_sysconfdir}/pki/mock/
 %{_bindir}/buildzm.sh
 
 %changelog
-* Wed Jun 22 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-4
+* Wed Jun 22 2016 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-4
 - Add support for Fedora 24
 
 * Mon Nov 16 2015 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-3
