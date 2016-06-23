@@ -1,6 +1,6 @@
 Name:           zmrepo-mock-configs      
 Version:        1.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
