@@ -2,7 +2,7 @@
 
 Name:           zmrepo       
 Version:        7
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Zoneminder and its dependencies for CentOS 7
 
 Group:          System Environment/Daemons 
@@ -10,7 +10,7 @@ License:        GPLv2+ and LGPLv2+ and MIT
 
 URL:            http://www.zoneminder.com/
 # RPMFusion does not yet have rpms for el7
-#Source0:        RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
+Source0:        RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
 Source1:	RPM-GPG-KEY-EPEL-7-zmrepo
 Source2:        RPM-GPG-KEY-zmrepo	
 Source3:        GPL
@@ -29,7 +29,7 @@ GPG keys as well as configuration for yum and up2date.
 
 %prep
 %setup -q  -c -T
-#install -pm 644 %{SOURCE0} .
+install -pm 644 %{SOURCE0} .
 install -pm 644 %{SOURCE1} .
 install -pm 644 %{SOURCE2} .
 install -pm 644 %{SOURCE3} .
@@ -45,8 +45,8 @@ install -pm 644 %{SOURCE5} .
 rm -rf $RPM_BUILD_ROOT
 
 #GPG Key
-#install -Dpm 644 %{SOURCE0} \
-#    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
+install -Dpm 644 %{SOURCE0} \
+    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
 install -Dpm 644 %{SOURCE1} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7-zmrepo
 install -Dpm 644 %{SOURCE2} \
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/*
 
 %changelog
+* Fri Mar 10 2017  Andrew Bauer <knnniggett@users.sourceforge.net> - 7-8
+- Add new rpmfusion el7 gpg key
+
 * Sat Feb 27 2016  Andrew Bauer <knnniggett@users.sourceforge.net> - 7-7
 - Added added new mirror
 
