@@ -1,6 +1,6 @@
 Name:           zmrepo-mock-configs      
 Version:        1.0
-Release:        4%{?dist}
+Release:        6%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
@@ -35,10 +35,13 @@ Source21:	RPM-GPG-KEY-rpmfusion-free-fedora-22-zmrepo
 Source22:	RPM-GPG-KEY-rpmfusion-free-fedora-23-zmrepo
 Source23:	RPM-GPG-KEY-zmrepo
 
+
 Source24:	zmrepo-f24-i386.cfg
 Source25:	zmrepo-f24-x86_64.cfg
 Source26:	zmrepo-f24-armhfp.cfg
 Source27:	RPM-GPG-KEY-rpmfusion-free-fedora-24-zmrepo
+
+Source28:       RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
 
 BuildArch:     noarch
 Requires:      mock 
@@ -76,6 +79,7 @@ install -pm 644 %{SOURCE24} .
 install -pm 644 %{SOURCE25} .
 install -pm 644 %{SOURCE26} .
 install -pm 644 %{SOURCE27} .
+install -pm 644 %{SOURCE28} .
 
 %build
 
@@ -117,6 +121,7 @@ install -pm 644 %{SOURCE21} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE22} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE23} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE27} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE28} %{buildroot}%{_sysconfdir}/pki/mock/
 
 %post
 
@@ -131,6 +136,12 @@ install -pm 644 %{SOURCE27} %{buildroot}%{_sysconfdir}/pki/mock/
 %{_bindir}/buildzm.sh
 
 %changelog
+* Sat Mar 18 2017 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-6
+- Add rpmfusion keys for el7
+
+* Wed Nov 23 2016 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-5
+- Add support for Fedora 25
+
 * Wed Jun 22 2016 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-4
 - Add support for Fedora 24
 
