@@ -1,6 +1,6 @@
 Name:           zmrepo-mock-configs      
 Version:        1.0
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
@@ -136,6 +136,9 @@ install -pm 644 %{SOURCE28} %{buildroot}%{_sysconfdir}/pki/mock/
 %{_bindir}/buildzm.sh
 
 %changelog
+* Sat Mar 18 2017 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-7
+- Uncomment rpmfusion el7 key reference from el7 mock config
+
 * Sat Mar 18 2017 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-6
 - Add rpmfusion keys for el7
 
