@@ -1,6 +1,6 @@
 Name:           zmrepo-mock-configs      
 Version:        1.0
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
@@ -43,6 +43,12 @@ Source27:	RPM-GPG-KEY-rpmfusion-free-fedora-24-zmrepo
 
 Source28:       RPM-GPG-KEY-rpmfusion-free-el-7-zmrepo
 
+Source29:	zmrepo-f25-i386.cfg
+Source30:	zmrepo-f25-x86_64.cfg
+Source31:	zmrepo-f25-armhfp.cfg
+Source32:	RPM-GPG-KEY-rpmfusion-free-fedora-25-zmrepo
+
+
 BuildArch:     noarch
 Requires:      mock 
 
@@ -80,6 +86,10 @@ install -pm 644 %{SOURCE25} .
 install -pm 644 %{SOURCE26} .
 install -pm 644 %{SOURCE27} .
 install -pm 644 %{SOURCE28} .
+install -pm 644 %{SOURCE29} .
+install -pm 644 %{SOURCE30} .
+install -pm 644 %{SOURCE31} .
+install -pm 644 %{SOURCE32} .
 
 %build
 
@@ -107,6 +117,9 @@ install -pm 644 %{SOURCE14} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE24} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE25} %{buildroot}%{_sysconfdir}/mock/
 install -pm 644 %{SOURCE26} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE29} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE30} %{buildroot}%{_sysconfdir}/mock/
+install -pm 644 %{SOURCE31} %{buildroot}%{_sysconfdir}/mock/
 
 # Install build script into bin
 install -pm 755 %{SOURCE15} %{buildroot}%{_bindir}/
@@ -122,6 +135,7 @@ install -pm 644 %{SOURCE22} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE23} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE27} %{buildroot}%{_sysconfdir}/pki/mock/
 install -pm 644 %{SOURCE28} %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 644 %{SOURCE32} %{buildroot}%{_sysconfdir}/pki/mock/
 
 %post
 
@@ -136,6 +150,9 @@ install -pm 644 %{SOURCE28} %{buildroot}%{_sysconfdir}/pki/mock/
 %{_bindir}/buildzm.sh
 
 %changelog
+* Thu Mar 30 2017 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-8
+- Re-add support for Fedora 25
+
 * Sat Mar 18 2017 Andrew Bauer <knnniggett@users.sourceforge.net> - 1-7
 - Uncomment rpmfusion el7 key reference from el7 mock config
 
