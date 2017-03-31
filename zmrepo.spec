@@ -19,7 +19,7 @@ Group:          System Environment/Daemons
 License:        GPLv2
 
 URL:            https://github.com/knnniggett/zmrepo
-Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz
+Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz#/zmrepo.tar.gz
 
 BuildArch:      noarch
 
@@ -44,19 +44,19 @@ GPG keys as well as configuration for yum/dnf.
 %{__mkdir} -p %{buildroot}%{_sysconfdir}/yum.repos.d
 
 # Install the repo config files
-install -pm 0644 SOURCES/zmrepo-%{distro}.repo %{buildroot}%{_sysconfdir}/yum.repos.d
-install -pm 0644 SOURCES/zmrepo-%{distro}-testing.repo %{buildroot}%{_sysconfdir}/yum.repos.d
+install -pm 0644 repo/zmrepo-%{distro}.repo %{buildroot}%{_sysconfdir}/yum.repos.d
+install -pm 0644 repo/zmrepo-%{distro}-testing.repo %{buildroot}%{_sysconfdir}/yum.repos.d
 
 # Insall the GPG Keys
-install -pm 0644 SOURCES/%{rpmfusion_gpg_key} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
-install -pm 0644 SOURCES/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
+install -pm 0644 gpg/%{rpmfusion_gpg_key} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
+install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
 %post
 
 %postun 
 
 %files
-%license GPL
+%license LICENSE
 %config(noreplace) /etc/yum.repos.d/zmrepo-%{distro}.repo
 %config(noreplace) /etc/yum.repos.d/zmrepo-%{distro}-testing.repo
 %{_sysconfdir}/pki/rpm-gpg/%{rpmfusion_gpg_key}

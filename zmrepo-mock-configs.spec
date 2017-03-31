@@ -33,20 +33,20 @@ This package contains zmrepo config files for mock builds.
 %{__mkdir} -p %{buildroot}%{_bindir}
 
 # Install mock config files into mock config folder
-install -pm 0644 SOURCES/zmrepo-*.cfg %{buildroot}%{_sysconfdir}/mock
+install -pm 0644 cfg/zmrepo-*.cfg %{buildroot}%{_sysconfdir}/mock
 
 # Install build script into bin
-install -pm 755 SOURCES/buildzm.sh %{buildroot}%{_bindir}/
+install -pm 755 bin/buildzm.sh %{buildroot}%{_bindir}/
 
 # Install GPG keys into mock keys folder
-install -pm 0644 SOURCES/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
+install -pm 0644 gpg/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
 
 %post
 
 %postun 
 
 %files
-%license GPL
+%license LICENSE
 %config(noreplace) %{_sysconfdir}/mock/zmrepo-*.cfg
 %config(noreplace) %{_sysconfdir}/pki/mock/RPM-GPG-KEY*
 %{_bindir}/buildzm.sh
