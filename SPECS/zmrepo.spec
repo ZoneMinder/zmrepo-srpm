@@ -1,6 +1,6 @@
 # Unified zmrepo specfile for all supported distros
 
-%if 0%{fedora}
+%if 0%{?fedora}
     %global zmrepo_mjr_ver %{fedora}
     %global distro fedora
     %global rpmfusion_gpg_key RPM-GPG-KEY-rpmfusion-free-%{distro}-%{zmrepo_mjr_ver}-zmrepo
@@ -11,7 +11,7 @@
 %endif
 
 Name:           zmrepo       
-Version:        %{zmrepo_mjr_ver}.0
+Version:        %{zmrepo_mjr_ver}
 Release:        1%{?dist}
 Summary:        Zoneminder and its dependencies for %{distro} %{zmrepo_mjr_ver}
 
@@ -19,7 +19,7 @@ Group:          System Environment/Daemons
 License:        GPLv2
 
 URL:            https://github.com/knnniggett/zmrepo
-Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz#/zmrepo-%{version}.tar.gz
+Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz
 
 BuildArch:      noarch
 
@@ -62,11 +62,7 @@ install -pm 0644 SOURCES/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-g
 %{_sysconfdir}/pki/rpm-gpg/%{rpmfusion_gpg_key}
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
-#
-# Most recent changelog entry should use the version macro
-# Older changelog entries should use the zmrepo_mjr_ver macro
-#
 %changelog
-* Fri Mar 31 2017  Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}
+* Fri Mar 31 2017  Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
 - Redesign for easier management
 

@@ -1,5 +1,7 @@
+# Version tracks the most recent supported version of Fedora
+
 Name:           zmrepo-mock-configs      
-Version:        2.0
+Version:        25
 Release:        1%{?dist}
 Summary:        Zmrepo mock config files
 
@@ -7,7 +9,7 @@ Group:          System Environment/Daemons
 License:        GPLv2
 
 URL:            https://github.com/knnniggett/zmrepo
-Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz#/zmrepo-mock-configs-%{version}.tar.gz
+Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz#/zmrepo-mock-configs.tar.gz
 
 BuildArch:      noarch
 
@@ -50,6 +52,6 @@ install -pm 0644 SOURCES/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
 %{_bindir}/buildzm.sh
 
 %changelog
-* Fri Mar 31 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 2-1
+* Fri Mar 31 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 25-1
 - Redesign for easier management
-- 2.0 Release
+
