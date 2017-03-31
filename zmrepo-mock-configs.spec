@@ -41,10 +41,6 @@ install -pm 755 bin/buildzm.sh %{buildroot}%{_bindir}/
 # Install GPG keys into mock keys folder
 install -pm 0644 gpg/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
 
-%post
-
-%postun 
-
 %files
 %license LICENSE
 %config(noreplace) %{_sysconfdir}/mock/zmrepo-*.cfg

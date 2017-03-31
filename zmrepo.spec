@@ -51,10 +51,6 @@ install -pm 0644 repo/zmrepo-%{distro}-testing.repo %{buildroot}%{_sysconfdir}/y
 install -pm 0644 gpg/%{rpmfusion_gpg_key} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
-%post
-
-%postun 
-
 %files
 %license LICENSE
 %config(noreplace) /etc/yum.repos.d/zmrepo-%{distro}.repo
