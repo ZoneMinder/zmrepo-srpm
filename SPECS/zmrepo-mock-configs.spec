@@ -13,6 +13,8 @@ BuildArch:      noarch
 
 Requires:       mock 
 
+BuildRequires:  coreutils
+
 %description
 This package contains zmrepo config files for mock builds.
 
@@ -24,9 +26,9 @@ This package contains zmrepo config files for mock builds.
 
 %install
 # Create folders in the buildroot
-mkdir -p %{buildroot}%{_sysconfdir}/mock
-mkdir -p %{buildroot}%{_sysconfdir}/pki/mock
-mkdir -p %{buildroot}%{_bindir}
+%{__mkdir} -p %{buildroot}%{_sysconfdir}/mock
+%{__mkdir} -p %{buildroot}%{_sysconfdir}/pki/mock
+%{__mkdir} -p %{buildroot}%{_bindir}
 
 # Install mock config files into mock config folder
 install -pm 0644 SOURCES/zmrepo-*.cfg %{buildroot}%{_sysconfdir}/mock
