@@ -1,6 +1,6 @@
 [zmrepo]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch
-baseurl=http://zmrepo.connortechnology.com/el/$releasever/$basearch
+baseurl=http://zmrepo.zoneminder.com/el/$releasever/$basearch
         http://67.53.78.182/el/$releasever/$basearch
         http://zmrepo.mehvc.com/el/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/el/$releasever/$basearch
@@ -15,7 +15,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever-zmrepo
 [zmrepo-source]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Source
 baseurl=http://zmrepo.mehvc.com/el/$releasever/SRPMS
-        http://zmrepo.connortechnology.com/el/$releasever/SRPMS
+        http://zmrepo.zoneminder.com/el/$releasever/SRPMS
 #mirrorlist=http://zmrepo.mehvc.com/el/$releasever/$basearch
 enabled=0
 gpgcheck=1

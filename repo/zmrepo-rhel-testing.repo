@@ -4,7 +4,7 @@
 
 [zmrepo-testing]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test
-baseurl=http://zmrepo.connortechnology.com/el/testing/$releasever/$basearch
+baseurl=http://zmrepo.zoneminder.com/el/testing/$releasever/$basearch
         http://67.53.78.182/el/testing/$releasever/$basearch
         http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
@@ -19,7 +19,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever-zmrepo
 [zmrepo-testing-debuginfo]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test Debug
 baseurl=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch/debug
-        http://zmrepo.connortechnology.com/el/testing/$releasever/$basearch/debug
+        http://zmrepo.zoneminder.com/el/testing/$releasever/$basearch/debug
 #mirrorlist=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch/debug
 enabled=0
 gpgcheck=1
@@ -28,7 +28,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 [zmrepo-testing-source]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test Source
 baseurl=http://zmrepo.mehvc.com/el/testing/$releasever/SRPMS
-        http://zmrepo.connortechnology.com/el/testing/$releasever/SRPMS
+        http://zmrepo.zoneminder.com/el/testing/$releasever/SRPMS
 #mirrorlist=http://zmrepo.mehvc.com/el/testing/$releasever/$basearch
 enabled=0
 gpgcheck=1

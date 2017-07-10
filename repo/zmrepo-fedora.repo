@@ -1,6 +1,6 @@
 [zmrepo]
 name=Zoneminder and its dependencies for Fedora $releasever - $basearch
-baseurl=http://zmrepo.connortechnology.com/f/$releasever/$basearch
+baseurl=http://zmrepo.zoneminder.com/f/$releasever/$basearch
         http://67.53.78.182/f/$releasever/$basearch
         http://zmrepo.mehvc.com/f/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
@@ -14,7 +14,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-zmr
 [zmrepo-source]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Source
 baseurl=http://zmrepo.mehvc.com/f/$releasever/SRPMS
-        http://zmrepo.connortechnology.com/f/$releasever/SRPMS
+        http://zmrepo.zoneminder.com/f/$releasever/SRPMS
 #mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
 enabled=0
 gpgcheck=1

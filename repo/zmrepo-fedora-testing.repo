@@ -4,7 +4,7 @@
 
 [zmrepo-testing]
 name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test
-baseurl=http://zmrepo.connortechnology.com/f/testing/$releasever/$basearch
+baseurl=http://zmrepo.zoneminder.com/f/testing/$releasever/$basearch
         http://67.53.78.182/f/testing/$releasever/$basearch
         http://zmrepo.mehvc.com/f/testing/$releasever/$basearch
 #mirrorlist=http://zmrepo.mehvc.com/f/testing/$releasever/$basearch
@@ -18,7 +18,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-zmr
 [zmrepo-testing-debuginfo]
 name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Debug
 baseurl=http://zmrepo.mehvc.com/f/testing/$releasever/$basearch/debug
-        http://zmrepo.connortechnology.com/f/testing/$releasever/$basearch/debug
+        http://zmrepo.zoneminder.com/f/testing/$releasever/$basearch/debug
 #mirrorlist=http://zmrepo.mehvc.com/f/testing/$releasever/$basearch/debug
 enabled=0
 gpgcheck=1
@@ -27,7 +27,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 [zmrepo-testing-source]
 name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Source
 baseurl=http://zmrepo.mehvc.com/f/testing/$releasever/SRPMS
-        http://zmrepo.connortechnology.com/f/testing/$releasever/SRPMS
+        http://zmrepo.zoneminder.com/f/testing/$releasever/SRPMS
 #mirrorlist=http://zmrepo.mehvc.com/f/testing/$releasever/$basearch
 enabled=0
 gpgcheck=1
