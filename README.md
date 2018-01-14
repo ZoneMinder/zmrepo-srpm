@@ -1,5 +1,5 @@
 # [zmrepo](http://zmrepo.zoneminder.com)
-Zmrepo is an RPM repository for ZoneMinder rpm's and its dependencies.
+Zmrepo is an RPM repository for ZoneMinder rpm's and its dependencies. It is intended primarily for development and testing.
 
 The zmrepo github repository contains the source files necessary for building the zmrepo rpm.
 
