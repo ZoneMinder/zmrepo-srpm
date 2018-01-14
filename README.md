@@ -3,6 +3,8 @@ Zmrepo is an RPM repository for ZoneMinder rpm's and its dependencies.
 
 The zmrepo github repository contains the source files necessary for building the zmrepo rpm.
 
+**Fedora and EL7 users should get the latest ZoneMinder releases from [RPM Fusion](https://rpmfusion.org/).**
+
 Currently supported Linux distributions and architectures:
 - el6 - CentOS/RHEL/SL 6 (x86, x86_64)
 - el7 - CentOS/RHEL/SL 7 (x86_64 only)
