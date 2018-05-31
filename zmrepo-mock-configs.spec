@@ -48,7 +48,7 @@ install -pm 0644 gpg/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
 %{_bindir}/buildzm.sh
 
 %changelog
-* Thu May 31 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 28-1
+* Thu May 31 2018 Andrew Bauer <zonexpertconsulting@outlook.com> - 28-1
 - Add support for Fedora 28
 
 * Tue Jun 13 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 26-1

@@ -59,7 +59,7 @@ install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 %changelog
-* Thu May 31 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
+* Thu May 31 2018 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
 - Add support for Fedora %{version}
 
 * Fri Mar 31 2017  Andrew Bauer <zonexpertconsulting@outlook.com> - 27-1
