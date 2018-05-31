@@ -1,15 +1,15 @@
 # Version tracks the most recent supported version of Fedora
 
 Name:           zmrepo-mock-configs      
-Version:        26
+Version:        28
 Release:        1%{?dist}
 Summary:        Zmrepo mock config files
 
 Group:          System Environment/Daemons 
 License:        GPLv2
 
-URL:            https://github.com/knnniggett/zmrepo
-Source0:        https://github.com/knnniggett/zmrepo/archive/master.tar.gz#/zmrepo-mock-configs.tar.gz
+URL:            https://github.com/ZoneMinder/zmrepo-srpm
+Source0:        https://github.com/ZoneMinder/zmrepo-srpm/archive/master.tar.gz#/zmrepo-mock-configs.tar.gz
 
 BuildArch:      noarch
 
@@ -48,6 +48,9 @@ install -pm 0644 gpg/RPM-GPG-KEY* %{buildroot}%{_sysconfdir}/pki/mock
 %{_bindir}/buildzm.sh
 
 %changelog
+* Thu May 31 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 28-1
+- Add support for Fedora 28
+
 * Tue Jun 13 2017 Andrew Bauer <zonexpertconsulting@outlook.com> - 26-1
 - Add support for Fedora 26, support for Fedora 27 unfinished
 
