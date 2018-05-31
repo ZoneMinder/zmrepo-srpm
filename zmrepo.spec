@@ -33,7 +33,7 @@ This package contains the ZoneMinder (zmrepo) repository
 GPG keys as well as configuration for yum/dnf.
 
 %prep
-%autosetup -n zmrepo-master
+%autosetup -n zmrepo-srpm-master
 
 %build
 # Nothing to build

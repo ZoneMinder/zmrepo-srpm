@@ -21,7 +21,7 @@ BuildRequires:  coreutils
 This package contains zmrepo config files for mock builds.
 
 %prep
-%autosetup -n zmrepo-master
+%autosetup -n zmrepo-srpm-master
 
 %build
 # Nothing to build
