@@ -33,7 +33,7 @@ This package contains the ZoneMinder (zmrepo) repository
 GPG keys as well as configuration for yum/dnf.
 
 %prep
-%autosetup -n zmrepo-srpm-master
+%autosetup -n zmrepo
 
 %build
 # Nothing to build
@@ -43,23 +43,19 @@ GPG keys as well as configuration for yum/dnf.
 %{__mkdir} -p %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{__mkdir} -p %{buildroot}%{_sysconfdir}/yum.repos.d
 
-# Install the repo config files
+# Install the repo config file
 install -pm 0644 repo/zmrepo-%{distro}.repo %{buildroot}%{_sysconfdir}/yum.repos.d
-install -pm 0644 repo/zmrepo-%{distro}-testing.repo %{buildroot}%{_sysconfdir}/yum.repos.d
 
-# Insall the GPG Keys
-install -pm 0644 gpg/%{rpmfusion_gpg_key} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
+# Insall the GPG Key
 install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
 %files
 %license LICENSE
 %config(noreplace) /etc/yum.repos.d/zmrepo-%{distro}.repo
-%config(noreplace) /etc/yum.repos.d/zmrepo-%{distro}-testing.repo
-%{_sysconfdir}/pki/rpm-gpg/%{rpmfusion_gpg_key}
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 %changelog
-* Thu May 31 2018 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
+* Sat Nov 17 2018 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
 - Add support for Fedora %{version}
 
 * Fri Mar 31 2017  Andrew Bauer <zonexpertconsulting@outlook.com> - 27-1

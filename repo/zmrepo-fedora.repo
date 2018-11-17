@@ -1,21 +1,24 @@
+#
+# ZmRepo Testing Repo - DO NOT USE ON PRODUCTION SYSTEMS
+#
+
 [zmrepo]
-name=Zoneminder and its dependencies for Fedora $releasever - $basearch
-baseurl=http://zmrepo.zoneminder.com/f/$releasever/$basearch
-        http://67.53.78.182/f/$releasever/$basearch
-        http://zmrepo.mehvc.com/f/$releasever/$basearch
-#mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
+name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test
+baseurl=http://zmrepo.zoneminder.com/f/testing/$releasever/$basearch
 enabled=1
 gpgcheck=1
-# zmrepo uses packages from other repos
-# Import all required gpg keys
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-zmrepo
-       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
+
+[zmrepo-debuginfo]
+name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Debug
+baseurl=http://zmrepo.zoneminder.com/f/testing/$releasever/$basearch/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 [zmrepo-source]
-name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Source
-baseurl=http://zmrepo.mehvc.com/f/$releasever/SRPMS
-        http://zmrepo.zoneminder.com/f/$releasever/SRPMS
-#mirrorlist=http://zmrepo.mehvc.com/f/$releasever/$basearch
+name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Source
+baseurl=http://zmrepo.zoneminder.com/f/testing/$releasever/SRPMS
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
