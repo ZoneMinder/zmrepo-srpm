@@ -4,21 +4,21 @@
 
 [zmrepo]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test
-baseurl=http://zmrepo.zoneminder.com/el/testing/$releasever/$basearch
+baseurl=http://zmrepo.zoneminder.com/el/$releasever/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo      
 
 [zmrepo-debuginfo]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test Debug
-baseurl=http://zmrepo.zoneminder.com/el/testing/$releasever/$basearch/debug
+baseurl=http://zmrepo.zoneminder.com/el/$releasever/$basearch/debug
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 [zmrepo-source]
 name=Zoneminder and its dependencies for Enterprise Linux $releasever - $basearch - Test Source
-baseurl=http://zmrepo.zoneminder.com/el/testing/$releasever/SRPMS
+baseurl=http://zmrepo.zoneminder.com/el/$releasever/SRPMS
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
