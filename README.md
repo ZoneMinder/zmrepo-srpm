@@ -10,7 +10,7 @@ The zmrepo github repository contains the source files necessary for building th
 Currently supported Linux distributions and architectures:
 - el7 - CentOS/RHEL/SL 7 (x86_64 only)
 - el8 - CentOS/RHEL/SL 8 (x86_64 only)
-- f29 - Fedora 28 (x86, x86_64, arm7hl)
-- f30 - Fedora 29 (x86, x86_64, arm7hl)
+- f29 - Fedora 28 (x86_64, arm7hl)
+- f30 - Fedora 29 (x86_64, arm7hl)
 
 NOTE: zmrepo maintains packages for the two most recent versions of CentOS and Fedora. Packages for older Redhat distros do exist. However, they are unmaintained and not guaranteed to remain indefinitely.
