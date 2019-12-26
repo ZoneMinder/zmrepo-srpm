@@ -3,11 +3,9 @@
 %if 0%{?fedora}
     %global zmrepo_mjr_ver %{fedora}
     %global distro fedora
-    %global rpmfusion_gpg_key RPM-GPG-KEY-rpmfusion-free-%{distro}-%{zmrepo_mjr_ver}-zmrepo
 %else
     %global zmrepo_mjr_ver %{rhel}
     %global distro rhel
-    %global rpmfusion_gpg_key RPM-GPG-KEY-rpmfusion-free-el-%{zmrepo_mjr_ver}-zmrepo
 %endif
 
 Name:           zmrepo       
@@ -55,9 +53,6 @@ install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 %changelog
-* Sat Nov 17 2018 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
-- Add support for Fedora %{version}
-
-* Fri Mar 31 2017  Andrew Bauer <zonexpertconsulting@outlook.com> - 27-1
-- Redesign for easier management
+* Wed Dec 25 2019 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
+- zmrepo yum/dnf repo config
 
