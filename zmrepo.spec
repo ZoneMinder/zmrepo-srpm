@@ -10,7 +10,7 @@
 
 Name:           zmrepo       
 Version:        %{zmrepo_mjr_ver}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Zoneminder and its dependencies for %{distro} %{zmrepo_mjr_ver}
 
 Group:          System Environment/Daemons 
@@ -23,7 +23,7 @@ BuildArch:      noarch
 
 BuildRequires:  coreutils
 
-Requires:      %{distro}-release = %{zmrepo_mjr_ver}
+Requires:      rpmfusion-free-release = %{zmrepo_mjr_ver}
 %{?rhel:Requires: epel-release >= %{zmrepo_mjr_ver}} 
 
 %description
@@ -58,6 +58,10 @@ install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 %changelog
+* Fri Dec 27 2019 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-3
+- Removed requirement for distro-release package, as it was problematic
+- Added requirement for rpmfusion-free-release
+
 * Fri Dec 27 2019 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-2
 - Fix source0 & autosetup
 - Don't use $releasever, it's not expanding as expected on RHEL.
