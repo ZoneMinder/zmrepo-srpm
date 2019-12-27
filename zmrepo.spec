@@ -10,14 +10,14 @@
 
 Name:           zmrepo       
 Version:        %{zmrepo_mjr_ver}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zoneminder and its dependencies for %{distro} %{zmrepo_mjr_ver}
 
 Group:          System Environment/Daemons 
 License:        GPLv2
 
 URL:            https://github.com/ZoneMinder/zmrepo-srpm
-Source0:        https://github.com/ZoneMinder/zmrepo-srpm/archive/master.tar.gz#/zmrepo.tar.gz
+Source0:        https://github.com/ZoneMinder/zmrepo-srpm/archive/master.tar.gz
 
 BuildArch:      noarch
 
@@ -31,7 +31,12 @@ This package contains the ZoneMinder (zmrepo) repository
 GPG keys as well as configuration for yum/dnf.
 
 %prep
-%autosetup -n zmrepo
+%autosetup -n zmrepo-srpm-master
+
+# $releasever does not expand as expected on rhel, so replace it
+%if 0%{?rhel}
+sed -i 's!$releasever!%{rhel}!' repo/zmrepo-rhel.repo
+%endif
 
 %build
 # Nothing to build
@@ -53,6 +58,10 @@ install -pm 0644 gpg/RPM-GPG-KEY-zmrepo %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 %changelog
+* Fri Dec 27 2019 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-2
+- Fix source0 & autosetup
+- Don't use $releasever, it's not expanding as expected on RHEL.
+
 * Wed Dec 25 2019 Andrew Bauer <zonexpertconsulting@outlook.com> - %{version}-1
 - zmrepo yum/dnf repo config
 
