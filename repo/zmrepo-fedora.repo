@@ -3,21 +3,21 @@
 #
 
 [zmrepo]
-name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test
+name=ZoneMinder for Fedora $releasever - $basearch - Test
 baseurl=https://zmrepo.zoneminder.com/fc/$releasever/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 [zmrepo-debuginfo]
-name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Debug
+name=ZoneMinder for Fedora $releasever - $basearch - Test Debug
 baseurl=https://zmrepo.zoneminder.com/fc/$releasever/$basearch/debug
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zmrepo
 
 [zmrepo-source]
-name=Zoneminder and its dependencies for Fedora $releasever - $basearch - Test Source
+name=ZoneMinder for Fedora $releasever - $basearch - Test Source
 baseurl=https://zmrepo.zoneminder.com/fc/$releasever/SRPMS
 enabled=0
 gpgcheck=1
